@@ -1,0 +1,26 @@
+ <table class="table border-radius table-borderless table-secondary text-center">
+ 	<tr #move>
+ 		<td class="p-1" *ngFor="let randomPinColor of randomPinColors" width="20%">
+ 			<div class="row d-flex align-items-center">
+ 				<div class="col-9">
+ 					<div class="big-circle" #pin [attr.data-color]="randomPinColor" [ngClass]="randomPinColor"></div>
+ 				</div>
+ 				<div class="col-3 arrows-col">
+ 					<div class="row">
+ 						<div class="col-12" style="height: 20px">
+							<i  (click)="nextPinColor(pin)" class="pointer text-primary fa fa-sort-up"></i>
+ 						</div>
+ 						<div class="col-12">
+							<i (click)="previousPinColor(pin)" class="pointer text-primary fa fa-sort-desc"></i>
+ 						</div>
+ 					</div>	
+ 				</div>
+ 			</div>	
+ 		</td>
+ 		<td class="p-1" width="20%">
+ 			<div [ngClass]="{'disabled':_stopGame}" class="mt-1 mr-2 btn btn-block btn-lg btn-success" (click)="makeMoveEvent(move)">
+ 					<i class="text-white fa fa-plus"></i>
+ 			</div>
+ 		</td>
+ 	</tr>
+ </table>

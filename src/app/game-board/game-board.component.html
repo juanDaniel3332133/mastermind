@@ -1,0 +1,75 @@
+ <table #gameBoard class="table border-radius table-borderless table-secondary text-center">
+ 	<!-- secret code -->
+ 	<tr class="mb-3">
+ 		<td width="20%">
+ 			<div class="pl-0">
+ 				<div class="big-circle">
+ 					<i class="text-white text-bolder mt-2 fa fa-question"></i>
+ 				</div>
+ 			</div>
+ 		</td>
+ 		<td width="20%">
+ 			<div class="pl-0 ">
+ 				<div class="big-circle">
+ 					<i class="text-white text-bolder mt-2 fa fa-question"></i>
+ 				</div>
+ 			</div>
+ 		</td>
+ 		<td width="20%">
+ 			<div class="pl-0 ">
+ 				<div class="big-circle">
+ 					<i class="text-white text-bolder mt-2 fa fa-question"></i>
+ 				</div>
+ 			</div>
+ 		</td>
+ 		<td width="20%">
+ 			<div class="pl-0 ">
+ 				<div class="big-circle">
+ 					<i class="text-white text-bolder mt-2 fa fa-question"></i>
+ 				</div>
+ 			</div>
+ 		</td>
+ 		<td width="20%">
+ 		</td>
+ 	</tr>
+ 	
+ 	<!-- play spaces -->
+ 	<tr class="p-0" data-used=false *ngFor="let row of rows">
+ 		<td class="p-0"  width="20%">
+ 			<div class="pl-0">
+ 				<div class="big-circle"></div>
+ 			</div>
+ 		</td>
+ 		<td class="p-0"  width="20%">
+ 			<div class="pl-0 ">
+ 				<div class="big-circle"></div>
+ 			</div>
+ 		</td>
+ 		<td class="p-0"  width="20%">
+ 			<div class="pl-0 ">
+ 				<div class="big-circle"></div>
+ 			</div>
+ 		</td>
+ 		<td class="p-0"  width="20%">
+ 			<div class="pl-0 ">
+ 				<div class="big-circle"></div>
+ 			</div>
+ 		</td>
+ 		<td class="p-0" width="20%">
+ 			<div class="row mt-1 mb-3">
+ 				<div  class="offset-2 col-4 p-0">
+ 					<div class="small-circle"></div>
+ 				</div>
+ 				<div class="col-4 p-0">
+ 					<div class="small-circle"></div>
+ 				</div>
+ 				<div class="offset-2 col-4 p-0">
+ 					<div class="small-circle"></div>
+ 				</div>
+ 				<div class="col-4 p-0">
+ 					<div class="small-circle"></div>
+ 				</div>
+ 			</div>
+ 		</td>
+ 	</tr>
+ </table>

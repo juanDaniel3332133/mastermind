@@ -1,0 +1,30 @@
+<div class="_container mt-4">
+  <h1 class="text-center text-info text-uppercase my-2">{{title}}</h1>
+
+  <div *ngIf="_gameOver" class="alert text-center text-uppercase" [ngClass]="_gameOver.type">
+      <h3>{{_gameOver.message}}</h3>
+      <span (click)="refresh()" class="btn btn-md" [ngClass]="{'btn-success': _gameOver.type == 'alert-success', 'btn-danger': _gameOver.type == 'alert-danger'}">click to play again</span>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <!-- game board -->
+     <app-game-board
+       [mastermind]="mastermind"
+       (gameOver)="gameOver($event)"
+     ></app-game-board>
+    
+    </div>
+    <div class="col-12">
+    
+      <!-- section for select move -->
+     <app-choose-move 
+      [stopGame$]="stopGame$"
+      (makeMove)="makeMove($event)"
+      ></app-choose-move>
+    
+    </div>
+  </div>  
+
+</div>
